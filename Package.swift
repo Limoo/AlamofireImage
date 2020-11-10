@@ -1,4 +1,5 @@
-// swift-tools-version:5.0
+// swift-tools-version:5.3
+// The swift-tools-version declares the minimum version of Swift required to build this package.
 //
 //  Package.swift
 //
@@ -28,7 +29,7 @@ import PackageDescription
 let package = Package(
     name: "AlamofireImage",
     platforms: [
-        .iOS(.v8),
+        .iOS(.v11),
         .macOS(.v10_10),
         .tvOS(.v9),
         .watchOS(.v2)
@@ -37,7 +38,7 @@ let package = Package(
         .library(name: "AlamofireImage", targets: ["AlamofireImage"])
     ],
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "4.9.0")
+        .package(url: "https://github.com/Limoo/Alamofire", from: "4.9.3")
     ],
     targets: [
         .target(
@@ -45,6 +46,5 @@ let package = Package(
             dependencies: ["Alamofire"],
             path: "Source"
         )
-    ],
-    swiftLanguageVersions: [.v4, .v4_2, .v5]
+    ]
 )
